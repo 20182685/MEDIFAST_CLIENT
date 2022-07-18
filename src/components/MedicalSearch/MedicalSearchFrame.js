@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import MedicalSearchList from './MedicalSearchList';
 
 const MedicalSearchFrame = (props) => {
+
+    const [seleccion, setSeleccion] = useState('ordenar');
+    const [MedicalSearchListVisible, setMedicalSearchListVisible] = useState(false);
+
+    useEffect(() => {
+        seleccion === 'ordenar' ? setMedicalSearchListVisible(true) : setMedicalSearchListVisible(false);
+    }, [seleccion]);
+
+    const handleOnChange = (event) => {
+        setSeleccion(event.target.value);
+    }
+
+
     return (
         <div className='layout-specing'>
             <div className='row'>
@@ -14,9 +27,24 @@ const MedicalSearchFrame = (props) => {
                         </ul>
                     </nav>
                 </div>
+                <div className='col-xl-3 col-lg-6 col-md-8 mt-4 mt-md-0'>
+                    <div className='justify-content-md-end'>
+                        <form>
+                            <div className='row justify-content-between align-items-center'>
+                                <div className='col-sm-12 col-md-5'>
+                                    <div className='mb-0 position-relative'>
+                                        <select className='form-control time-during select2input select2-hidden-accessible' value={seleccion} onChange={handleOnChange}>
+                                            <option value='ordenar'>Ordenar</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
             <div>
-                {<MedicalSearchList props={props} />}
+                {MedicalSearchListVisible && <MedicalSearchList props={props} />}
             </div>
             <div className='row text-center'>
                 <div className='col-12 mt-4'>

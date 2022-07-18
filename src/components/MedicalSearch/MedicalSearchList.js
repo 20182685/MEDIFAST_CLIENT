@@ -6,7 +6,7 @@ const MedicalSearchList = (props) => {
   
     const getbuscarmedico = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/citasPorMedico/${props.props.props.id_bus}`);
+        const response = await fetch(`http://localhost:5000/buscarmedico/${props.props.props.id_bus}`);
         const jsonData = await response.json();
         setbuscar(jsonData);
   
