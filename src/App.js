@@ -6,7 +6,6 @@ import MessagingPage from './pages/MessagingPage.js';
 
 //import ExamplePage from './ExamplePage';
 
-
 function App() {
   return (
     <BrowserRouter>
@@ -21,7 +20,7 @@ function App() {
         />
         <Route
           path="/consulting"
-          element={<ConsultingPage id_cit='0007' id_med='0001' id_pac='0001' />}
+          element={<ConsultingPage id_med='0001' />}
         />
         <Route
           path="/messaging"

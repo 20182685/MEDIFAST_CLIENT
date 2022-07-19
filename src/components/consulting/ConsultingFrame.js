@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NewAppointment from '../appointment/NewAppointment.js';
-import PacientData from './PacientData.js';
-import PacientAppointments from './PacientAppointments.js';
+import PacientSearch from './PacientSearch.js';
 import '../../css/consulting/ConsultingFrame.css';
 
+const Consulting = () => {
+  const [search, setSearch] = useState('0001');
 
-const Consulting = (props) => {
+  const handleChange = event => {
+    setSearch(event.target.value);
+  };
+
+  const handleClick = event => {
+    event.preventDefault();
+    setSearch(search);
+  };
+
   return (
     <div className='layout-specing'>
       <div className='row'>
@@ -26,17 +35,16 @@ const Consulting = (props) => {
           </div>
         </div>
       </div>
-      <div className='layout-specing mt-3'>
-        <div className='row'>
-          <div className='col-md-4'>
-            <h5>Datos Personales</h5>
-            <PacientData props={props} />
-          </div>
-          <div className='col-md-8'>
-            <h5>Historia Clínica</h5>
-            <PacientAppointments props={props} />
-          </div>
-        </div>
+      <div className='mt-3'>
+        <input
+          type='text'
+          placeholder='Ingresar ID de Paciente'
+          value={search}
+          onChange={handleChange}/>
+        <button onClick={handleClick}>Buscar</button>
+      </div>
+      <div>
+        <PacientSearch id_pac={search} />
       </div>
     </div>
   );

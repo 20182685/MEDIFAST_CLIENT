@@ -11,7 +11,9 @@ export default function NewAppointment() {
 
   const handleShow = () => setShow(true);
 
-  const [id_cit, setId_cita] = useState('');
+  var random = Math.floor(1000 + Math.random() * 9000);
+
+  const [id_cit, setId_cita] = useState(random);
   const [id_med, setId_med] = useState('');
   const [id_pac, setId_pac] = useState('');
   const [fecha, setFecha] = useState('');

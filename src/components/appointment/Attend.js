@@ -60,7 +60,9 @@ export default function NewAppointment({ cita }) {
     }
   };
 
-  const [id_rec, setId_rec] = useState('0012');
+  var random = Math.floor(1000 + Math.random() * 9000);
+
+  const [id_rec, setId_rec] = useState(random);
   const [id_cit, setId_cit] = useState(cita.id_cit);
   const [medicamento, setMedicamento] = useState('');
   const [cantidad, setCantidad] = useState('');
