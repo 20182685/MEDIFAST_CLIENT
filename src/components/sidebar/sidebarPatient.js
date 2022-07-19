@@ -13,7 +13,7 @@ const SidebarPatient = () => {
               <i className='fas fa-book-medical fa-fw me-3'></i><span>Atentiones</span></a>
             <a className='list-group-item list-group-item-action py-2 ripple'>
               <i className='fas fa-comment-medical fa-fw me-3'></i><span>Mensajes</span></a>
-            <a className='list-group-item list-group-item-action py-2 ripple active'>
+            <a className='list-group-item list-group-item-action py-2 ripple'>
               <i className='fas fa-heart fa-fw me-3'></i><span>Busqueda</span></a>
             <a className='list-group-item list-group-item-action py-2 ripple'>
               <i className='fas fa-heart fa-fw me-3'></i><span>Recomendaciones</span></a>
