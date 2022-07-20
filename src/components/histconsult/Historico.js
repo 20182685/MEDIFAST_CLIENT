@@ -3,15 +3,15 @@ import '../../App.css';
 import 'chart.js/auto';
 import {Chart} from 'react-chartjs-2';
 import React, {useState} from 'react';
-import axios from "axios";
+//import axios from "axios";
 
 const Historico = _ => {
   const [datos, setDatos] = useState({});
   async function getDatos(){
-    const res = await axios.get(/*URL MEDICOHISTORICO */);
-    const data1 = res.data.content;
+    /*const res = await axios.get(----URL MEDICOHISTORICO---);
+    const data1 = res.data.content; 
     console.log(data1);
-    setDatos(data1);
+    setDatos(data1);*/
   }
   React.useEffect(() => {
     getDatos();
@@ -56,7 +56,7 @@ const Historico = _ => {
     datasets: [
       {
         label: "Primer dataset",
-        data: data?.meses,
+        data: datos?.meses,
         fill: true,
         backgroundColor: "rgba(75,192,192,0.2)",
         borderColor: "rgba(75,192,192,1)",
@@ -110,12 +110,9 @@ const Historico = _ => {
     </div>
 
   );
-
-
-
 }
 
-
+export default Historico;
 
 
  

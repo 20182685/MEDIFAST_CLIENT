@@ -38,7 +38,7 @@ const FormPac = _ => {
   return(
     <div className='container'>
       <div className='row col-sm-6 mx-auto mt-4 mb-5'>
-        <h1>Registro de médico especialista</h1>
+        <h1>Registro de paciente</h1>
       </div>
       <div className='row'>
         <div className='col-sm'>

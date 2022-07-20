@@ -8,6 +8,7 @@ import InfoPaciente from "./pages/InfoPaciente.js"
 import RegistroInter from './pages/RegistroInter.js';
 import RegistroMedico from './pages/RegistroMedico.js';
 import RegistroPaciente from './pages/RegistroPaciente.js';
+import HistoricoConsulta from './pages/HistoricoConsulta.js';
 
 //import ExamplePage from './ExamplePage';
 
@@ -50,6 +51,10 @@ function App() {
         <Route
           path="/registro-inter/registro-pac"
           element={<RegistroPaciente/>}
+        />
+        <Route
+          path="/historico"
+          element={<HistoricoConsulta/>}
         />
       </Routes>
     </BrowserRouter>
