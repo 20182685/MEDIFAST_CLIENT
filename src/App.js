@@ -3,6 +3,7 @@ import AppointmentPage from './pages/AppointmentPage.js';
 import ReviewPage from './pages/ReviewPage.js';
 import ConsultingPage from './pages/ConsultingPage.js';
 import MessagingPage from './pages/MessagingPage.js';
+import Landing from './pages/Landing.js';
 
 //import ExamplePage from './ExamplePage';
 
@@ -25,6 +26,10 @@ function App() {
         <Route
           path="/messaging"
           element={<MessagingPage id_med='0001' />}
+        />
+        <Route
+          path="/"
+          element={<Landing/>}
         />
       </Routes>
     </BrowserRouter>
