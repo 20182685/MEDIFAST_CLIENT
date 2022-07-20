@@ -34,7 +34,7 @@ function App() {
         />
         <Route 
           path="/MedicalSearch"
-          element={<MedicalSearchPage id_bus='1001' />}
+          element={<MedicalSearchPage id_pac='0003'  />}
         />
         <Route 
           path="/attention"
