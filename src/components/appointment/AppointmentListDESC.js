@@ -34,6 +34,7 @@ const AppointmentListDESC = (props) => {
                 <th className='border-bottom p-3'>Edad</th>
                 <th className='border-bottom p-3'>Género</th>
                 <th className='border-bottom p-3'>Especialidad</th>
+                <th className='border-bottom p-3'>Modalidad</th>
                 <th className='border-bottom p-3'>Fecha</th>
                 <th className='border-bottom p-3'>Hora</th>
                 <th className='border-bottom p-3'>Acciones</th>
@@ -48,6 +49,7 @@ const AppointmentListDESC = (props) => {
                   <td className='p-3'>{cita.edad}</td>
                   <td className='p-3'>{cita.genero}</td>
                   <td className='p-3'>{cita.especialidad}</td>
+                  <td className='p-3'>{cita.modalidad}</td>
                   <td className='p-3'>{cita.fecha}</td>
                   <td className='p-3'>{cita.hora}</td>
                   <td className='text-end p-3'>

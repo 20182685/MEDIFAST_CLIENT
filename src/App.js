@@ -12,7 +12,7 @@ function App() {
       <Routes>
         <Route
           path="/appointments"
-          element={<AppointmentPage id_med='0001' />}
+          element={<AppointmentPage id_med='0002' />}
         />
         <Route
           path="/reviews"

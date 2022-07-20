@@ -16,6 +16,7 @@ export default function NewAppointment() {
   const [id_cit, setId_cita] = useState(random);
   const [id_med, setId_med] = useState('');
   const [id_pac, setId_pac] = useState('');
+  const [modalidad, setModalidad] = useState('');
   const [fecha, setFecha] = useState('');
   const [hora, setHora] = useState('');
   const [diagnostico, setDiagnostico] = useState('');
@@ -24,7 +25,7 @@ export default function NewAppointment() {
     event.preventDefault();
 
     try {
-      const body = { id_cit, id_med, id_pac, fecha, hora, diagnostico };
+      const body = { id_cit, id_med, id_pac, modalidad, fecha, hora, diagnostico };
       const response = await fetch('http://localhost:5000/citas', {
         method: 'POST',
         headers: { 'Content-type': 'application/json' },
@@ -76,6 +77,15 @@ export default function NewAppointment() {
                     type='text'
                     defaultValue={id_pac}
                     onChange={event => setId_pac(event.target.value)}
+                  />
+                  <label>
+                    Modalidad
+                  </label>
+                  <input
+                    className='form-control mb-2'
+                    type='text'
+                    defaultValue={modalidad}
+                    onChange={event => setModalidad(event.target.value)}
                   />
                   <label>
                     Fecha
