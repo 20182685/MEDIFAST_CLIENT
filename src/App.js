@@ -5,6 +5,9 @@ import ConsultingPage from './pages/ConsultingPage.js';
 import MessagingPage from './pages/MessagingPage.js';
 import Landing from './pages/Landing.js';
 import InfoPaciente from "./pages/InfoPaciente.js"
+import RegistroInter from './pages/RegistroInter.js';
+import RegistroMedico from './pages/RegistroMedico.js';
+import RegistroPaciente from './pages/RegistroPaciente.js';
 
 //import ExamplePage from './ExamplePage';
 
@@ -33,8 +36,20 @@ function App() {
           element={<Landing/>}
         />
         <Route
-          path="/InfoPaciente"
+          path="/info-paciente"
           element={<InfoPaciente/>}
+        />
+        <Route
+          path="/registro-inter"
+          element={<RegistroInter/>}
+        />
+        <Route
+          path="/registro-inter/registro-med"
+          element={<RegistroMedico/>}
+        />
+        <Route
+          path="/registro-inter/registro-pac"
+          element={<RegistroPaciente/>}
         />
       </Routes>
     </BrowserRouter>
