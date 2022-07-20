@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import '../../css/usercard/UserCard.css';
+import EditMedicInfo from './EditMedicInfo';
+
 
 const UserCard = (props) => {
 	const [medico, setMedico] = useState([]);
@@ -19,6 +22,7 @@ const UserCard = (props) => {
 		getMedico();
 	}, []);
 
+
 	return (
 		<div className='pt-3'>
 			<div className='profile-card card rounded-lg shadow p-4 p-xl-5 mb-4 text-center position-relative overflow-hidden'>
@@ -33,7 +37,9 @@ const UserCard = (props) => {
 					<p className='mb-2'><i className='fa fa-globe mr-2'></i> {medico.web}</p>
 					<p className='mb-2'><i className='fa fa-map-marker-alt mr-2'></i> {medico.ubicacion}</p>
 				</div>
+				<a><EditMedicInfo medico={props.props.id_med} /></a>
 			</div>
+
 		</div>
 	);
 };

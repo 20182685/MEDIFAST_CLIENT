@@ -3,6 +3,8 @@ import AppointmentPage from './pages/AppointmentPage.js';
 import ReviewPage from './pages/ReviewPage.js';
 import ConsultingPage from './pages/ConsultingPage.js';
 import MessagingPage from './pages/MessagingPage.js';
+import NewAppointmentPac from './components/patientAppointment/NewAppointmentPac.js';
+import PatientAppointments from './components/patientAppointment/PatientAppointments.js';
 
 //import ExamplePage from './ExamplePage';
 
@@ -26,7 +28,16 @@ function App() {
           path="/messaging"
           element={<MessagingPage id_med='0001' />}
         />
-      </Routes>
+        <Route
+          path="/patientNewAppointment"
+          element={<NewAppointmentPac />}
+        />
+        <Route
+          path="/patientAppointments"
+          element={<PatientAppointments />}
+        />
+        </Routes>
+        
     </BrowserRouter>
   );
 };
