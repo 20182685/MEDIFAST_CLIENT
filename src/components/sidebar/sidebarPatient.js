@@ -8,9 +8,6 @@ const SidebarPatient = () => {
         <div className='position-sticky'>
           <div className='list-group list-group-flush mx-3 mt-4'>
             <a className='list-group-item list-group-item-action py-2 ripple'>
-            <a href='http://localhost:3000/' className='list-group-item list-group-item-action py-2 ripple'></a>
-              <i className='fas fa-clipboard-user fa-fw me-3'></i><span>Fichas</span></a>
-            <a className='list-group-item list-group-item-action py-2 ripple'>
             <a href='http://localhost:3000/attention' className='list-group-item list-group-item-action py-2 ripple'></a>
               <i className='fas fa-book-medical fa-fw me-3'></i><span>Atentiones</span></a>
             <a className='list-group-item list-group-item-action py-2 ripple'>

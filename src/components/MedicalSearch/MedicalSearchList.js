@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from 'react-bootstrap';
 import '../../css/MedicalSearch/MedicalSearchFrame.css';
 
 const MedicalSearchList = () => {
@@ -30,6 +31,7 @@ const MedicalSearchList = () => {
                   <th className='border-bottom p-3'>Nombre del medico</th>
                   <th className='border-bottom p-3'>Especialidad</th>
                   <th className='border-bottom p-3'>Tipo de atención</th>
+                  <th className='border-bottom p-3'>Ficha</th>
                 </tr>
               </thead>
               <tbody>
@@ -39,6 +41,7 @@ const MedicalSearchList = () => {
                     <td className='p-3'>{buscar.nombre}</td>
                     <td className='p-3'>{buscar.especialidad}</td>
                     <td className='p-3'>Virtual</td>
+                    <Button><a href='http://localhost:3000/perfilmedico'>Ficha de medico</a></Button>
                   </tr>
                 ))}
               </tbody>

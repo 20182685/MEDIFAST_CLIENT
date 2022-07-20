@@ -7,7 +7,7 @@ import MedicalSearchPage from './pages/MedicalSearchPage.js';
 import AttentionPage from './pages/AttentionPage.js';
 import Login from './components/loginPatient/login.js';
 import MessagingPatientPage from './pages/MessagingPatientPage.js';
-import PerfilMed from './components/perfilMedico/PerfilFrame.js'
+import PerfilFrame from './pages/perfilPage.js';
 
 //import ExamplePage from './ExamplePage';
 
@@ -38,7 +38,7 @@ function App() {
         />
         <Route 
           path="/attention"
-          element={<AttentionPage id_cit='0007' id_med='0001' />}
+          element={<AttentionPage id_cit='0007'/>}
         />
         <Route 
           path="/Login"
@@ -50,7 +50,7 @@ function App() {
         />
         <Route
           path="/perfilmedico"
-          element={<PerfilMed />}
+          element={<PerfilFrame id_med='0001'/>}
         />
       </Routes>
     </BrowserRouter>
