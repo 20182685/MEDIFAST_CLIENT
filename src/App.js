@@ -5,7 +5,9 @@ import ConsultingPage from './pages/ConsultingPage.js';
 import MessagingPage from './pages/MessagingPage.js';
 import MedicalSearchPage from './pages/MedicalSearchPage.js';
 import AttentionPage from './pages/AttentionPage.js';
-import Login from './components/loginPatient/login.js'
+import Login from './components/loginPatient/login.js';
+import MessagingPatientPage from './pages/MessagingPatientPage.js';
+import PerfilMed from './components/perfilMedico/PerfilFrame.js'
 
 //import ExamplePage from './ExamplePage';
 
@@ -41,6 +43,14 @@ function App() {
         <Route 
           path="/Login"
           element={<Login />}
+        />
+        <Route
+          path="/mensajepaciente"
+          element={<MessagingPatientPage />}
+        />
+        <Route
+          path="/perfilmedico"
+          element={<PerfilMed />}
         />
       </Routes>
     </BrowserRouter>
