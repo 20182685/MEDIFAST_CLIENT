@@ -5,7 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../App.css';
 
 
-function MyVerticallyCenteredModal(props) {
+const MyVerticallyCenteredModal = (props) => {
   return (
     <Modal
       {...props}
@@ -67,7 +67,7 @@ function MyVerticallyCenteredModal(props) {
   );
 }
 
-function ModalInicio() {
+const ModalInicio = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
   return (
